@@ -8,6 +8,7 @@ import {
 } from '@popperjs/core/lib/popper-lite';
 import * as React from 'react';
 import {
+	ComponentProps,
 	ComponentType,
 	FunctionComponent,
 	ReactElement,
@@ -22,6 +23,17 @@ import { isBrowser, setRef } from '../../utils';
 import { Portal } from '../Portal';
 import { EAlignment } from './alignment';
 import * as styleRefs from './Positioner.treat';
+
+export interface Props
+	extends Pick<ComponentProps<typeof Portal>, 'container'> {
+	alignment?: EAlignment;
+	isOpen?: boolean;
+	triggerRef: RefObject<HTMLElement>;
+	triggerOffset?: number;
+}
+
+type WrappedComponent<ExtraProps> = ExtraProps &
+	Pick<Props, 'isOpen' | 'alignment' | 'triggerRef'>;
 
 const createPopper = popperGenerator({
 	defaultModifiers: [
@@ -42,17 +54,6 @@ const createPopper = popperGenerator({
 	},
 });
 
-export interface Props {
-	alignment?: EAlignment;
-	isOpen?: boolean;
-	triggerRef: RefObject<HTMLElement>;
-	triggerOffset?: number;
-	withBackdrop?: boolean;
-}
-
-type WrappedComponent<ExtraProps> = ExtraProps &
-	Pick<Props, 'isOpen' | 'alignment' | 'triggerRef'>;
-
 export function usingPositioner<T extends {} = {}>(
 	WrappingComponent: ComponentType<WrappedComponent<T>>,
 ): FunctionComponent<Props & T> {
@@ -61,6 +62,7 @@ export function usingPositioner<T extends {} = {}>(
 		isOpen = false,
 		triggerRef,
 		triggerOffset = 12,
+		container,
 		...rest
 	}) => {
 		if (!isBrowser) return null;
@@ -144,7 +146,7 @@ export function usingPositioner<T extends {} = {}>(
 		/* eslint-enable react-hooks/rules-of-hooks */
 
 		return (
-			<Portal>
+			<Portal container={container}>
 				<div
 					ref={handleRef}
 					role="none presentation"

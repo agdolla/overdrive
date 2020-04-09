@@ -599,6 +599,7 @@ const SuggestionListFlyout = usingPositioner(({ triggerRef, children }) => (
 		backgroundColour="white"
 		boxShadow="2"
 		style={{
+			overflow: 'hidden', // TODO: Move this to BOX perhaps?
 			width: triggerRef.current
 				? triggerRef.current.clientWidth
 				: undefined,

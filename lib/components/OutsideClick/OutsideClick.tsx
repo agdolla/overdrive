@@ -10,15 +10,22 @@ import {
 	useRef,
 } from 'react';
 
+import { setRef } from '../../utils';
+
 export const useOutsideClick = (
 	refs: Array<RefObject<HTMLElement>>,
 	onClickAway: () => void,
 ) => {
 	const callbackRef = useRef(onClickAway);
+	const refsRef = useRef(refs);
+
+	useEffect(() => {
+		setRef(refsRef, refs);
+	}, [refs]);
 
 	// So we don't have to re-bind events when a callback gets updated, simply call the callback when the event fires.
 	useEffect(() => {
-		callbackRef.current = onClickAway;
+		setRef(callbackRef, onClickAway);
 	}, [onClickAway]);
 
 	useEffect(() => {
@@ -28,19 +35,27 @@ export const useOutsideClick = (
 		)
 			return void 0;
 
-		return bindEvent(document, 'mouseup', (event) => {
-			const shouldClose = refs
-				.map((item) => item.current)
-				.every(
-					(element) =>
-						!element?.contains(event.target as HTMLElement),
-				);
+		return bindEvent(document, 'click', (event) => {
+			if (!refsRef.current.every((node) => node.current !== null)) {
+				return;
+			}
 
-			if (shouldClose) {
+			const currentRefs = refsRef.current;
+			let insideDOM;
+
+			const paths = event.composedPath();
+
+			currentRefs.forEach((ref) => {
+				if (paths.includes(ref.current)) {
+					insideDOM = true;
+				}
+			});
+
+			if (!insideDOM) {
 				callbackRef.current();
 			}
 		});
-	}, [refs]);
+	}, []);
 };
 
 const bindEvent = <
