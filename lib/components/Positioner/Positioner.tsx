@@ -10,12 +10,15 @@ import * as React from 'react';
 import {
 	ComponentProps,
 	ComponentType,
+	createContext,
 	FunctionComponent,
 	ReactElement,
 	RefObject,
 	useCallback,
+	useContext,
 	useEffect,
 	useRef,
+	useState,
 } from 'react';
 import { useStyles } from 'react-treat';
 
@@ -23,6 +26,7 @@ import { isBrowser, setRef } from '../../utils';
 import { Portal } from '../Portal';
 import { EAlignment } from './alignment';
 import * as styleRefs from './Positioner.treat';
+import { useOutsideClick } from '../OutsideClick';
 
 export interface Props
 	extends Pick<ComponentProps<typeof Portal>, 'container'> {
@@ -30,6 +34,8 @@ export interface Props
 	isOpen?: boolean;
 	triggerRef: RefObject<HTMLElement>;
 	triggerOffset?: number;
+
+	onRequestClose?(): void;
 }
 
 type WrappedComponent<ExtraProps> = ExtraProps &
@@ -54,6 +60,8 @@ const createPopper = popperGenerator({
 	},
 });
 
+const portalContainerContext = createContext<Element | null>(null);
+
 export function usingPositioner<T extends {} = {}>(
 	WrappingComponent: ComponentType<WrappedComponent<T>>,
 ): FunctionComponent<Props & T> {
@@ -63,6 +71,7 @@ export function usingPositioner<T extends {} = {}>(
 		triggerRef,
 		triggerOffset = 12,
 		container,
+		onRequestClose,
 		...rest
 	}) => {
 		if (!isBrowser) return null;
@@ -135,30 +144,49 @@ export function usingPositioner<T extends {} = {}>(
 			}
 		}, [isOpen]);
 
+		const [portalContainer, setPortalContainer] = useState();
+
+		const contextContainer = useContext(portalContainerContext);
+
+		const myContainer = container ?? contextContainer;
+
 		// Gets applied to the positioner div, that on mount will run this callback
 		const handleRef = useCallback(
 			(node) => {
+				setPortalContainer(node);
 				setRef(referenceRef, node);
+
 				handleOpen();
 			},
 			[handleOpen],
 		);
+
+		console.group('Positioner');
+		console.log('myContainer', myContainer);
+		console.log('portalContainer', portalContainer);
+		console.groupEnd();
+
+		useOutsideClick([referenceRef], () => {
+			if (typeof onRequestClose === 'function') onRequestClose();
+		});
 		/* eslint-enable react-hooks/rules-of-hooks */
 
 		return (
-			<Portal container={container}>
-				<div
-					ref={handleRef}
-					role="none presentation"
-					className={styles.root}>
-					{isOpen ? (
-						<WrappingComponent
-							{...(rest as T)}
-							triggerRef={triggerRef}
-							isOpen={isOpen}
-						/>
-					) : null}
-				</div>
+			<Portal container={myContainer}>
+				<portalContainerContext.Provider value={portalContainer!}>
+					<div
+						ref={handleRef}
+						role="none presentation"
+						className={styles.root}>
+						{isOpen ? (
+							<WrappingComponent
+								{...(rest as T)}
+								triggerRef={triggerRef}
+								isOpen={isOpen}
+							/>
+						) : null}
+					</div>
+				</portalContainerContext.Provider>
 			</Portal>
 		);
 	};

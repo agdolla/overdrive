@@ -41,7 +41,7 @@ export const useOutsideClick = (
 			}
 
 			const currentRefs = refsRef.current;
-			let insideDOM;
+			let insideDOM = false;
 
 			const paths = event.composedPath();
 
@@ -51,7 +51,7 @@ export const useOutsideClick = (
 				}
 			});
 
-			if (!insideDOM) {
+			if (insideDOM === false) {
 				callbackRef.current();
 			}
 		});

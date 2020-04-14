@@ -2,13 +2,13 @@ import { select } from '@storybook/addon-knobs';
 import * as React from 'react';
 import { useCallback, useRef, useState } from 'react';
 
+import { Box } from '../Box';
 import { Button } from '../Button';
 import { EPositionerAlignment } from '../Positioner';
+import { Stack } from '../Stack';
+import { StandardModal } from '../StandardModal';
 import { TextInput } from '../TextInput';
 import { Flyout } from '.';
-import { StandardModal } from '../StandardModal';
-import { Box } from '../Box';
-import { Stack } from '../Stack';
 
 const alignmentPicker = () =>
 	select('Alignment', EPositionerAlignment, EPositionerAlignment.BOTTOM_LEFT);
@@ -22,8 +22,11 @@ export default {
 const Impl = ({ children }) => {
 	const triggerRef = useRef(null);
 	const [isOpen, setIsOpen] = useState(true);
-	const closer = useCallback(() => setIsOpen(false), []);
-	const toggle = useCallback(() => setIsOpen(!isOpen), [isOpen]);
+	const closer = useCallback(() => {
+		console.log('closing');
+		setIsOpen(false);
+	}, []);
+	const toggle = useCallback(() => setIsOpen((prev) => !prev), []);
 
 	return (
 		<>
@@ -35,8 +38,8 @@ const Impl = ({ children }) => {
 				alignment={alignmentPicker()}
 				isOpen={isOpen}
 				onRequestClose={closer}>
-				<Box padding={'4'}>
-					<Stack spacing={'4'}>
+				<Box padding="4">
+					<Stack spacing="4">
 						<TextInput name="example" placeholder="example" />
 						<Button size="small" variant="primary" onClick={closer}>
 							Save

@@ -11,7 +11,7 @@ import { isHtmlElement, setRef } from '../../utils';
 
 export interface Props {
 	children?: ReactElement | ReactElement[] | null;
-	container?: Element;
+	container?: Element | null;
 }
 
 type RefValue<T> = T extends RefObject<infer T> ? T : never;
