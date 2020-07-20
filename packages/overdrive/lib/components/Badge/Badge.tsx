@@ -60,3 +60,5 @@ export const Badge = memo<Props>(
 		);
 	},
 );
+
+Badge.displayName = 'Badge';

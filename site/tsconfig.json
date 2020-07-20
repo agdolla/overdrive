@@ -1,0 +1,20 @@
+{
+	"extends": "@autoguru/tsconfig/web",
+	"compilerOptions": {
+		"baseUrl": "./",
+		"rootDir": "./",
+		"jsx": "preserve",
+		"outDir": "./dist",
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false
+	},
+	"include": [
+		"../packages/overdrive/lib/themes/treatTheme.d.ts",
+		"./next-env.d.ts",
+		"./src/**/*.ts",
+		"./src/**/*.tsx"
+	],
+	"exclude": ["node_modules"]
+}

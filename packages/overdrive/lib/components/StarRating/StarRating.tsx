@@ -75,6 +75,7 @@ export const StarRating: NamedExoticComponent<Props> = memo(
 		</Box>
 	),
 );
+StarRating.displayName = 'StarRating';
 
 const getStarIconType = (index: number, rating: number): EStarType => {
 	if (index + 1 <= Math.floor(rating)) {

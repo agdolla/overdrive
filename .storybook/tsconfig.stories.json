@@ -2,7 +2,7 @@
 	"extends": "../packages/overdrive/tsconfig.json",
 	"compilerOptions": {
 		"rootDir": "../",
-		"jsx": "react",
+		"jsx": "preserve",
 		"outDir": "./dist",
 		"incremental": true,
 		"composite": true

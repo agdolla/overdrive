@@ -95,11 +95,15 @@ jobs:
             - name: Build Playroom
               run: yarn playroom:build
 
+            - name: Build Site
+              run: yarn workspace @overdrive/site build
+
             - name: Stage ready for deploy
               run: |-
-                  mkdir -p site-dist/playroom;
+                  mkdir -p site-dist/{playroom,storybook};
                   mv .playroom/dist/* site-dist/playroom;
-                  mv storybook-static/* site-dist/;
+                  mv storybook-static/* site-dist/storybook;
+                  mv site/out/* site-dist/;
 
             - name: Deploy Site (main)
               if: github.ref == 'refs/heads/main'

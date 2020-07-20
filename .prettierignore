@@ -1,5 +1,6 @@
 /*
 !/packages/
+!/site/
 !/config/
 !/scripts/
 !/.github/
@@ -8,6 +9,8 @@
 !?*.*
 
 dist/
+out/
+.next/
 storybook-static/
 templates/
 

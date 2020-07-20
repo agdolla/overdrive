@@ -1,0 +1,27 @@
+{
+	"name": "@overdrive/site",
+	"version": "0.1.0",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"start": "next dev",
+		"prebuild": "next build",
+		"build": "next export"
+	},
+	"dependencies": {
+		"@autoguru/overdrive": "*",
+		"fast-memoize": "^2.5.2",
+		"prettier": "2.1.0",
+		"react": "16.13.1",
+		"react-dom": "16.13.1",
+		"react-element-to-jsx-string": "^14.3.1",
+		"react-syntax-highlighter": "^13.3.1",
+		"react-treat": "^1.5.1"
+	},
+	"devDependencies": {
+		"next": "9.3.6",
+		"next-images": "^1.4.1",
+		"next-treat": "^1.3.0",
+		"treat": "1.5.1"
+	}
+}

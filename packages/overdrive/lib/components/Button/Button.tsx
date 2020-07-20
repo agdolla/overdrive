@@ -195,6 +195,8 @@ const getButtonStates: (
 	return styles.defaultStates[variant];
 };
 
+Button.displayName = 'Button';
+
 const getButtonSize: (
 	styles: typeof styleRefs,
 	size: keyof typeof styles.size,

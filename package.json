@@ -4,7 +4,8 @@
 	"private": true,
 	"license": "MIT",
 	"workspaces": [
-		"packages/*"
+		"packages/*",
+		"site"
 	],
 	"scripts": {
 		"chromatic": "chromatic test --exit-zero-on-changes --build-script-name storybook:build",
@@ -97,6 +98,9 @@
 		"tslib": "2.0.1",
 		"typescript": "3.9.4",
 		"webpack": "4.44.1"
+	},
+	"resolutions": {
+		"webpack": "4.43.0"
 	},
 	"volta": {
 		"node": "14.8.0",
