@@ -5,6 +5,7 @@
 		"rootDir": "./",
 		"jsx": "preserve",
 		"outDir": "./dist",
+		"target": "ES2019",
 		"skipLibCheck": true,
 		"isolatedModules": true,
 		"noUnusedLocals": false,

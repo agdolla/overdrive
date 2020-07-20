@@ -4,6 +4,7 @@
 		"baseUrl": "./",
 		"rootDir": "./",
 		"outDir": "./dist",
+		"target": "ES2019",
 		"declaration": true,
 		"declarationMap": true,
 		"declarationDir": "./dist/",

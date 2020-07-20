@@ -4,6 +4,7 @@
 		"rootDir": "../",
 		"jsx": "preserve",
 		"outDir": "./dist",
+		"target": "ES2019",
 		"incremental": true,
 		"composite": true
 	},

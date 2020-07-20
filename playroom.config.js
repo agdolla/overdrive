@@ -29,6 +29,9 @@ module.exports = {
 					exclude: /node_modules/,
 					use: [
 						{
+							loader: require.resolve('babel-loader'),
+						},
+						{
 							loader: require.resolve('ts-loader'),
 							options: {
 								configFile: require.resolve(

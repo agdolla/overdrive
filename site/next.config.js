@@ -12,9 +12,7 @@ module.exports = withImages(
 		},
 		webpack(config, nextConfig) {
 			const jsRule = config.module.rules[0];
-			jsRule.include.unshift(
-				join(__dirname, '../packages/'),
-			);
+			jsRule.include.unshift(join(__dirname, '../packages/'));
 			jsRule.include.unshift(/@popperjs/);
 			const oldExclude = jsRule.exclude;
 			jsRule.exclude = (path) =>
@@ -22,9 +20,7 @@ module.exports = withImages(
 					? false
 					: oldExclude(path);
 			config.module.rules[0] = jsRule;
-			config.resolve.modules.unshift(
-				join(__dirname, '../packages/'),
-			);
+			config.resolve.modules.unshift(join(__dirname, '../packages/'));
 
 			if (nextConfig.isServer) {
 				const ext = config.externals[0];
