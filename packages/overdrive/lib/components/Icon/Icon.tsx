@@ -41,3 +41,4 @@ export const Icon: NamedExoticComponent<Props> = memo(
 		);
 	},
 );
+Icon.displayName = 'Icon';

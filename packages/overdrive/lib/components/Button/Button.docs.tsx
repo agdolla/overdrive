@@ -2,6 +2,9 @@ import type { ComponentDoc } from '@overdrive/site/componentDoc';
 import * as React from 'react';
 
 import { Button } from './Button';
+import { Text } from '../Text';
+import { Icon } from '../Icon';
+import { AccountIcon } from '@autoguru/icons';
 
 export default {
 	name: 'Button',
@@ -28,6 +31,22 @@ export default {
 			name: 'Small',
 			Example: () => (
 				<Button variant="primary" size="small">
+					Login
+				</Button>
+			),
+		},
+		{
+			name: 'With Icon',
+			description: (
+				<Text>
+					Sometimes you wish to also show an icon in addition to a{' '}
+					<Text strong>visible label</Text>. You can do this by simply
+					putting an icon as a child node next to some text.
+				</Text>
+			),
+			Example: () => (
+				<Button variant="primary" size="small">
+					<Icon icon={AccountIcon} />
 					Login
 				</Button>
 			),

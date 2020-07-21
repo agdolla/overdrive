@@ -6,6 +6,7 @@ export interface ComponentDoc {
 	description?: string;
 	demos: Array<{
 		name: string;
+		description?: JSX.Element;
 		backgroundColour?: BoxStyleProps['backgroundColour'];
 		Example: (props: {}) => JSX.Element;
 		code?: string;

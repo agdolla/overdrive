@@ -1,11 +1,4 @@
-import {
-	Box,
-	Heading,
-	Stack,
-	Text,
-	TextContainer,
-	ToastProvider,
-} from '@autoguru/overdrive';
+import { Box, Heading, Stack, Text } from '@autoguru/overdrive';
 import * as React from 'react';
 import { getAllRoutes, getComponentDoc } from '../../routeHelper';
 import { ThemedProvider } from '../../components/ThemeSettingsProvider';
@@ -33,41 +26,44 @@ export default ({ slug }) => {
 						)}
 					</Stack>
 					{doc.exports && (
-						<Code
-							code={`import { ${doc.exports.join(
+						<Code>
+							{`import { ${doc.exports.join(
 								',',
 							)} } from '@autoguru/overdrive';`}
-						/>
+						</Code>
 					)}
 				</Stack>
 				<Stack dividers space="8">
 					{doc.demos.map((demo, i) => (
 						<Stack key={i} space="4">
-							<Heading is="h3">{demo.name}</Heading>
+							<Stack space={'1'}>
+								<Heading is="h3">{demo.name}</Heading>
+								{demo.description && demo.description}
+							</Stack>
+
 							<Stack space="2">
 								<Box
 									padding={'2'}
 									backgroundColour={'gray200'}
 									borderRadius={'1'}>
 									<Stack space={'2'}>
-										<Box
-											padding={'7'}
-											borderRadius={'1'}
-											backgroundColour={
-												demo.backgroundColour ??
-												'gray200'
-											}>
-											<ThemedProvider>
+										<ThemedProvider>
+											<Box
+												padding={'7'}
+												borderRadius={'1'}
+												backgroundColour={
+													demo.backgroundColour ??
+													'gray200'
+												}>
 												<demo.Example />
-											</ThemedProvider>
-										</Box>
+											</Box>
+										</ThemedProvider>
 										<Box
 											padding={'4'}
 											backgroundColour={'white'}
 											borderRadius={'1'}>
-											<Code
-												code={
-													demo.code ??
+											<Code>
+												{demo.code ??
 													reactToJSXString(
 														demo.Example({}),
 														{
@@ -75,9 +71,8 @@ export default ({ slug }) => {
 															showFunctions: true,
 															useFragmentShortSyntax: true,
 														},
-													)
-												}
-											/>
+													)}
+											</Code>
 										</Box>
 									</Stack>
 								</Box>
