@@ -35,6 +35,17 @@ module.exports = withImages(
 				];
 			}
 
+			config.optimization.minimizer.forEach((item) => {
+				if (item.constructor.name === 'TerserPlugin') {
+					Object.assign(item.options.terserOptions.mangle, {
+						keep_fnames: true,
+					});
+					Object.assign(item.options.terserOptions.compress, {
+						keep_fnames: true,
+					});
+				}
+			});
+
 			return config;
 		},
 	}),

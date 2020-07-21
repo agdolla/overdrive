@@ -1,5 +1,6 @@
 import type { ComponentDoc } from '@overdrive/site/componentDoc';
 import * as React from 'react';
+
 import { EStarRatingSize, StarRating } from './StarRating';
 
 export default {
@@ -25,7 +26,7 @@ export default {
 				<StarRating
 					rating={4.3}
 					size={EStarRatingSize.Medium}
-					label={'4.3 — 105 Reviews'}
+					label="4.3 — 105 Reviews"
 				/>
 			),
 		},

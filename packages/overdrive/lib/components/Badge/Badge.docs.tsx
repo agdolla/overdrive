@@ -15,47 +15,43 @@ export default {
 		},
 		{
 			name: 'Red',
-			Example: () => <Badge label="Paid" colour={'red'} />,
+			Example: () => <Badge label="Paid" colour="red" />,
 		},
 		{
 			name: 'Red Inverted',
 			backgroundColour: 'white',
-			Example: () => (
-				<Badge label="Paid" colour={'red'} look={'inverted'} />
-			),
+			Example: () => <Badge label="Paid" colour="red" look="inverted" />,
 		},
 		{
 			name: 'Green',
-			Example: () => <Badge label="Paid" colour={'green'} />,
+			Example: () => <Badge label="Paid" colour="green" />,
 		},
 		{
 			name: 'Green Inverted',
 			backgroundColour: 'white',
 			Example: () => (
-				<Badge label="Paid" colour={'green'} look={'inverted'} />
+				<Badge label="Paid" colour="green" look="inverted" />
 			),
 		},
 		{
 			name: 'Yellow',
-			Example: () => <Badge label="Paid" colour={'yellow'} />,
+			Example: () => <Badge label="Paid" colour="yellow" />,
 		},
 		{
 			name: 'Yellow Inverted',
 			backgroundColour: 'white',
 			Example: () => (
-				<Badge label="Paid" colour={'yellow'} look={'inverted'} />
+				<Badge label="Paid" colour="yellow" look="inverted" />
 			),
 		},
 		{
 			name: 'Blue',
-			Example: () => <Badge label="Paid" colour={'blue'} />,
+			Example: () => <Badge label="Paid" colour="blue" />,
 		},
 		{
 			name: 'Blue Inverted',
 			backgroundColour: 'white',
-			Example: () => (
-				<Badge label="Paid" colour={'blue'} look={'inverted'} />
-			),
+			Example: () => <Badge label="Paid" colour="blue" look="inverted" />,
 		},
 	],
 } as ComponentDoc;

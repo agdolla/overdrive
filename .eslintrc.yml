@@ -33,3 +33,6 @@ overrides:
     - files: ['**/stories.tsx']
       rules:
           'import/no-extraneous-dependencies': off
+    - files: ['**/*.docs.tsx']
+      rules:
+          '@typescript-eslint/consistent-type-assertions': off

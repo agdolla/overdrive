@@ -9,7 +9,9 @@ import {
 
 export const isBrowser = typeof window !== 'undefined';
 
-export const isomorphicLayoutEffect = isBrowser ? useLayoutEffect : useEffect;
+export const useIsomorphicLayoutEffect = isBrowser
+	? useLayoutEffect
+	: useEffect;
 
 export const useUncontrolledState = <T extends unknown>(
 	value: T,
@@ -57,7 +59,7 @@ export const useId = (idFromProps?: string): string | null => {
 
 	const [id, setId] = useState(initialId);
 
-	isomorphicLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		if (id === null) {
 			setId(genId());
 		}
@@ -107,7 +109,7 @@ export const ownerDocument = (node?: Node): Document =>
  */
 export const useEventCallback = <T extends Function>(fn: T) => {
 	const ref = useRef(fn);
-	isomorphicLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		ref.current = fn;
 	});
 

@@ -1,9 +1,10 @@
 import type { ComponentDoc } from '@overdrive/site/componentDoc';
 import * as React from 'react';
-import { useToast } from './Toast';
-import { Button } from '../Button';
+
 import { Alert } from '../Alert';
+import { Button } from '../Button';
 import { Stack } from '../Stack';
+import { useToast } from './Toast';
 
 const Example = (intent) => () => {
 	// eslint-disable-next-line react-hooks/rules-of-hooks
@@ -18,7 +19,7 @@ const Example = (intent) => () => {
 			</div>
 
 			<Button
-				size={'small'}
+				size="small"
 				onClick={() => toast[intent]('Very cool toast message!')}>
 				Open Toast
 			</Button>

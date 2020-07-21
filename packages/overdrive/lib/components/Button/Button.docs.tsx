@@ -27,7 +27,7 @@ export default {
 		{
 			name: 'Small',
 			Example: () => (
-				<Button variant="primary" size={'small'}>
+				<Button variant="primary" size="small">
 					Login
 				</Button>
 			),
@@ -35,7 +35,7 @@ export default {
 		{
 			name: 'Small Danger',
 			Example: () => (
-				<Button variant="danger" size={'small'}>
+				<Button variant="danger" size="small">
 					Login
 				</Button>
 			),

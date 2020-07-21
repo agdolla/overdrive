@@ -8,12 +8,12 @@ import {
 	Reducer,
 	useCallback,
 	useContext,
-	useLayoutEffect,
 	useMemo,
 	useReducer,
 } from 'react';
 import { useStyles } from 'react-treat';
 
+import { useIsomorphicLayoutEffect } from '../../utils';
 import { Alert } from '../Alert';
 import { Box } from '../Box';
 import { Portal } from '../Portal';
@@ -181,7 +181,7 @@ const Toast: FunctionComponent<
 		remove(id);
 	}, [id, remove]);
 
-	useLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		const timeout = setTimeout(() => {
 			dismiss();
 		}, duration);

@@ -1,5 +1,6 @@
 import type { ComponentDoc } from '@overdrive/site/componentDoc';
 import * as React from 'react';
+
 import { Alert } from './Alert';
 
 export default {
@@ -14,15 +15,13 @@ export default {
 		{
 			name: 'Danger',
 			Example: () => (
-				<Alert intent={'danger'}>
-					This is a very important message.
-				</Alert>
+				<Alert intent="danger">This is a very important message.</Alert>
 			),
 		},
 		{
 			name: 'Warning',
 			Example: () => (
-				<Alert intent={'warning'}>
+				<Alert intent="warning">
 					This is a very important message.
 				</Alert>
 			),
@@ -30,7 +29,7 @@ export default {
 		{
 			name: 'Information',
 			Example: () => (
-				<Alert intent={'information'}>
+				<Alert intent="information">
 					This is a very important message.
 				</Alert>
 			),
@@ -38,7 +37,7 @@ export default {
 		{
 			name: 'Danger Dismissible',
 			Example: () => (
-				<Alert intent={'danger'} dismissible>
+				<Alert dismissible intent="danger">
 					This is a very important message.
 				</Alert>
 			),
@@ -46,7 +45,7 @@ export default {
 		{
 			name: 'Success Inline',
 			Example: () => (
-				<Alert intent={'success'} inline>
+				<Alert inline intent="success">
 					This is a very important message.
 				</Alert>
 			),
