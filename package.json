@@ -15,6 +15,7 @@
 		"playroom:build": "playroom build",
 		"release": "changeset publish",
 		"start": "concurrently -k \"playroom\" \"yarn:storybook\"",
+		"start:site": "yarn workspace @overdrive/site start",
 		"storybook": "start-storybook -p 6006",
 		"storybook:build": "build-storybook",
 		"test": "jest"
@@ -48,6 +49,9 @@
 		"tabWidth": 4,
 		"trailingComma": "all",
 		"useTabs": true
+	},
+	"resolutions": {
+		"webpack": "4.43.0"
 	},
 	"dependencies": {
 		"@autoguru/babel-preset": "1.0.97",
@@ -98,9 +102,6 @@
 		"tslib": "2.0.1",
 		"typescript": "3.9.4",
 		"webpack": "4.44.1"
-	},
-	"resolutions": {
-		"webpack": "4.43.0"
 	},
 	"volta": {
 		"node": "14.8.0",
