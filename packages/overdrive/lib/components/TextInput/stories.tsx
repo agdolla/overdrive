@@ -6,7 +6,6 @@ import {
 } from '@autoguru/icons';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
-import * as React from 'react';
 
 import { TextInput } from '.';
 

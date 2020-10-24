@@ -1,5 +1,4 @@
 import { act, fireEvent, render } from '@testing-library/react';
-import * as React from 'react';
 import { useState } from 'react';
 
 import { Switch } from './Switch';

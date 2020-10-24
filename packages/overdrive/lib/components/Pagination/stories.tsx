@@ -1,5 +1,4 @@
 import { number } from '@storybook/addon-knobs';
-import * as React from 'react';
 import { useState } from 'react';
 
 import { Pagination } from '.';

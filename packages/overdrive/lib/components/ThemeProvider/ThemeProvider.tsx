@@ -1,5 +1,4 @@
 import { invariant } from '@autoguru/utilities';
-import * as React from 'react';
 import { createContext, FunctionComponent, useContext } from 'react';
 import { TreatProvider } from 'react-treat';
 import type { ThemeRef } from 'treat';

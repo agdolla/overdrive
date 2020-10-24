@@ -1,7 +1,6 @@
 import { IconType, MinusIcon, PlusIcon } from '@autoguru/icons';
 import { clamp } from '@autoguru/utilities';
 import clsx from 'clsx';
-import * as React from 'react';
 import {
 	FunctionComponent,
 	KeyboardEvent,

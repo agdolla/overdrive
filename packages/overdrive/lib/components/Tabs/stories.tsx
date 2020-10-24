@@ -1,5 +1,4 @@
 import isChromatic from 'chromatic/isChromatic';
-import * as React from 'react';
 import { useEffect, useState } from 'react';
 
 import { Stack } from '../Stack';

@@ -1,6 +1,5 @@
 import type { IconType } from '@autoguru/icons';
 import type { NamedExoticComponent } from 'react';
-import * as React from 'react';
 import { cloneElement, memo } from 'react';
 import { useStyles } from 'react-treat';
 

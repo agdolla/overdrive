@@ -1,6 +1,5 @@
 import { CheckIcon } from '@autoguru/icons';
 import { render } from '@testing-library/react';
-import * as React from 'react';
 
 import { Icon } from '../Icon';
 import { BulletText } from './BulletText';

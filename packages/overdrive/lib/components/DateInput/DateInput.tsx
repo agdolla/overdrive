@@ -1,5 +1,4 @@
 import { warning } from '@autoguru/utilities';
-import * as React from 'react';
 
 import { Box } from '../Box';
 import { withEnhancedInput } from '../private/InputBase';

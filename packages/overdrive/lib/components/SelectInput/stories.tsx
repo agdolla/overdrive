@@ -1,6 +1,5 @@
 import { AccountEditIcon, CalendarIcon } from '@autoguru/icons';
 import { boolean, text } from '@storybook/addon-knobs';
-import * as React from 'react';
 
 import { SelectInput } from '.';
 

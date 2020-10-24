@@ -1,6 +1,5 @@
 import { action } from '@storybook/addon-actions';
 import { boolean, number } from '@storybook/addon-knobs';
-import * as React from 'react';
 import { useState } from 'react';
 
 import { Stepper } from '.';

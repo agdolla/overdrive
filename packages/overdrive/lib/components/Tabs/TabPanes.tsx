@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react';
-import * as React from 'react';
 import { Children, createContext } from 'react';
 import flattenChildren from 'react-keyed-flatten-children';
 import { useStyles } from 'react-treat';

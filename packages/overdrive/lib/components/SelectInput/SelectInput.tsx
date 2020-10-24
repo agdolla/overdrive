@@ -1,5 +1,4 @@
 import { ChevronDownIcon } from '@autoguru/icons';
-import * as React from 'react';
 import { ReactNode } from 'react';
 import { useStyles } from 'react-treat';
 

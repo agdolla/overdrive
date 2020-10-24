@@ -1,5 +1,4 @@
 import { select } from '@storybook/addon-knobs';
-import * as React from 'react';
 
 import { EAlignment } from '../Positioner/alignment';
 

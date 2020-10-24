@@ -1,7 +1,6 @@
 import { ArrowLeftIcon, ArrowRightIcon } from '@autoguru/icons';
 import { invariant } from '@autoguru/utilities';
 import type { FunctionComponent } from 'react';
-import * as React from 'react';
 import {
 	Children,
 	createContext,

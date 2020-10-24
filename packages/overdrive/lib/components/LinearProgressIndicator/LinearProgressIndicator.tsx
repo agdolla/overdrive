@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { memo, NamedExoticComponent } from 'react';
 import { useStyles } from 'react-treat';
 

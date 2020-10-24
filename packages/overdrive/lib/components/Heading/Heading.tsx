@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { ComponentProps, FunctionComponent } from 'react';
 import type { Theme } from 'treat/theme';
 

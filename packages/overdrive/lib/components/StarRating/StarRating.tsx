@@ -1,6 +1,5 @@
 import { StarHalfIcon, StarIcon } from '@autoguru/icons';
 import clsx from 'clsx';
-import * as React from 'react';
 import {
 	FunctionComponent,
 	memo,

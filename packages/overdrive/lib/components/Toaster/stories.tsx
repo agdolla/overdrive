@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { Actions } from '../Actions';
 import { Button } from '../Button';
 import { StandardModal } from '../StandardModal';

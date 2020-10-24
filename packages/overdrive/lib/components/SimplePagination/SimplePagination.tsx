@@ -1,5 +1,4 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@autoguru/icons';
-import * as React from 'react';
 import { memo, NamedExoticComponent } from 'react';
 
 import { noop } from '../../utils';

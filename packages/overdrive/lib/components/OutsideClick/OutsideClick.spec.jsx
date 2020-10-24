@@ -1,5 +1,4 @@
 import { fireEvent, render } from '@testing-library/react';
-import * as React from 'react';
 import { useRef } from 'react';
 import { OutsideClick, useOutsideClick } from './OutsideClick';
 

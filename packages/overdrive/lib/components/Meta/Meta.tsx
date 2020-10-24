@@ -1,5 +1,4 @@
 import { IconType } from '@autoguru/icons';
-import * as React from 'react';
 import { FunctionComponent } from 'react';
 import { useStyles } from 'react-treat';
 

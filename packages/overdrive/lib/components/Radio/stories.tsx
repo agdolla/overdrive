@@ -1,6 +1,5 @@
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
-import * as React from 'react';
 import { useState } from 'react';
 
 import { Badge } from '../Badge';

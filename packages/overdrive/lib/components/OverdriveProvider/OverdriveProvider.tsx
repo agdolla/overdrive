@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { ComponentProps, FunctionComponent, useEffect } from 'react';
 
 import { isBrowser } from '../../utils';

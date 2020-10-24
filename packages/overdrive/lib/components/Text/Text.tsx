@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react';
-import * as React from 'react';
 
 import type { BoxStyleProps } from '../Box';
 import { Box } from '../Box';

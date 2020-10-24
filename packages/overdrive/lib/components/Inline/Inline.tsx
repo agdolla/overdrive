@@ -1,5 +1,4 @@
 import type { FunctionComponent, ReactChild, ReactElement } from 'react';
-import * as React from 'react';
 import { Children, isValidElement } from 'react';
 import flattenChildren from 'react-keyed-flatten-children';
 import type { Theme } from 'treat/theme';

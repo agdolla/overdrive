@@ -1,6 +1,5 @@
 import { warning } from '@autoguru/utilities';
 import type { ComponentType, FunctionComponent, Reducer } from 'react';
-import * as React from 'react';
 import { useEffect, useReducer } from 'react';
 import FocusLock from 'react-focus-lock';
 import { useStyles } from 'react-treat';

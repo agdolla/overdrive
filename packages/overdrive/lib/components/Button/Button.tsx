@@ -1,6 +1,5 @@
 import { IconType } from '@autoguru/icons';
 import clsx from 'clsx';
-import * as React from 'react';
 import {
 	AriaAttributes,
 	ButtonHTMLAttributes,

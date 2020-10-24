@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-import * as React from 'react';
 import { useState } from 'react';
 
 import { Modal } from './Modal';

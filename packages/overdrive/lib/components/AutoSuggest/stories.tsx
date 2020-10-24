@@ -1,6 +1,5 @@
 import { CarIcon } from '@autoguru/icons';
 import { action } from '@storybook/addon-actions';
-import * as React from 'react';
 import { useEffect, useState } from 'react';
 
 import { Button } from '../Button';

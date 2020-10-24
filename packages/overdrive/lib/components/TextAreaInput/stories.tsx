@@ -1,5 +1,4 @@
 import { text } from '@storybook/addon-knobs';
-import * as React from 'react';
 
 import { TextAreaInput } from '.';
 

@@ -1,6 +1,5 @@
 import { CheckIcon } from '@autoguru/icons';
 import clsx from 'clsx';
-import * as React from 'react';
 import { FunctionComponent, memo, ReactNode } from 'react';
 import { useStyles } from 'react-treat';
 

@@ -1,5 +1,4 @@
 import { clamp } from '@autoguru/utilities';
-import * as React from 'react';
 import { ComponentProps, memo } from 'react';
 import { useStyles } from 'react-treat';
 

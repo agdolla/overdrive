@@ -1,5 +1,4 @@
 import type { ComponentPropsWithoutRef, FunctionComponent } from 'react';
-import * as React from 'react';
 
 import { Box } from '../Box';
 import { Positioner } from '../Positioner';

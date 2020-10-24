@@ -1,5 +1,4 @@
 import { PhoneIcon } from '@autoguru/icons';
-import * as React from 'react';
 
 import { Button } from '../Button';
 

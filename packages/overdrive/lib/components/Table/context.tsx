@@ -1,6 +1,5 @@
 import { invariant } from '@autoguru/utilities';
 import type { FunctionComponent } from 'react';
-import * as React from 'react';
 import { createContext, useContext, useMemo } from 'react';
 import type { Theme } from 'treat/theme';
 

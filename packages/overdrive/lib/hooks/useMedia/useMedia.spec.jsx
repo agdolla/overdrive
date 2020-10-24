@@ -1,5 +1,4 @@
 import { renderHook } from '@testing-library/react-hooks';
-import * as React from 'react';
 
 import { baseTheme } from '../../themes';
 import { useMedia } from './useMedia';

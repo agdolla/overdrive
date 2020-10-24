@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { forwardRef, ReactChild } from 'react';
 
 import { Box } from '../Box';

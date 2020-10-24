@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Fragment, FunctionComponent } from 'react';
 import { useStyles } from 'react-treat';
 

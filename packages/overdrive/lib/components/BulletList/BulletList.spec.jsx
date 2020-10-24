@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-import * as React from 'react';
 
 import { BulletList } from './BulletList';
 import { BulletListContext } from './context';

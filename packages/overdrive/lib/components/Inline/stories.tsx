@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { Button } from '../Button';
 import { Stack } from '../Stack';
 import { Text } from '../Text';

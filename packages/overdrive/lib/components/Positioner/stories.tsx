@@ -1,6 +1,5 @@
 import { action } from '@storybook/addon-actions';
 import { select } from '@storybook/addon-knobs';
-import * as React from 'react';
 import { createRef, useCallback, useRef, useState } from 'react';
 
 import { Box } from '../Box';

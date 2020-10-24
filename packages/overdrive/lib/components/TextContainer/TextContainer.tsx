@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { FunctionComponent, ReactElement } from 'react';
 
 import { Column, Columns } from '../Columns';

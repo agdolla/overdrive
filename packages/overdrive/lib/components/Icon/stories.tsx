@@ -1,5 +1,4 @@
 import { CalendarIcon } from '@autoguru/icons';
-import * as React from 'react';
 
 import { Icon } from '.';
 

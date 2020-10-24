@@ -1,5 +1,4 @@
 import { AccountBoxIcon } from '@autoguru/icons';
-import * as React from 'react';
 import { ComponentProps } from 'react';
 
 import { Column, Columns } from '../Columns';

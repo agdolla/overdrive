@@ -1,7 +1,6 @@
 import { ChevronDownIcon, CloseIcon } from '@autoguru/icons';
 import { wrapEvent } from '@autoguru/utilities';
 import clsx from 'clsx';
-import * as React from 'react';
 import {
 	ComponentPropsWithoutRef,
 	Dispatch,

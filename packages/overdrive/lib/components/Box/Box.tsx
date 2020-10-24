@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import type { AllHTMLAttributes } from 'react';
-import * as React from 'react';
 import { forwardRef } from 'react';
 
 import type { BoxStyleProps } from './useBoxStyles';

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Children, FunctionComponent, ReactNode } from 'react';
 import flattenChildren from 'react-keyed-flatten-children';
 import { useStyles } from 'react-treat';

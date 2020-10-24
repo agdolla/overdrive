@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import * as React from 'react';
 import { FunctionComponent, useContext } from 'react';
 import { useStyles } from 'react-treat';
 

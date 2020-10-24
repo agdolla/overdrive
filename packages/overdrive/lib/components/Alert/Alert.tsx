@@ -7,7 +7,6 @@ import {
 	WindowCloseIcon,
 } from '@autoguru/icons';
 import clsx from 'clsx';
-import * as React from 'react';
 import { ComponentProps, FunctionComponent, ReactChild } from 'react';
 import { useStyles } from 'react-treat';
 

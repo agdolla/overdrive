@@ -1,5 +1,4 @@
 import type { FunctionComponent } from 'react';
-import * as React from 'react';
 import { createContext, useMemo } from 'react';
 
 import { useId, useUncontrolledState } from '../../utils';

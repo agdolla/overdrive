@@ -1,5 +1,4 @@
 import type { ReactChild } from 'react';
-import * as React from 'react';
 import { AriaAttributes, forwardRef } from 'react';
 import { useStyles } from 'react-treat';
 import type { Theme } from 'treat/theme';

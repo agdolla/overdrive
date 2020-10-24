@@ -1,5 +1,4 @@
 import { invariant } from '@autoguru/utilities';
-import * as React from 'react';
 import {
 	ComponentProps,
 	createContext,
